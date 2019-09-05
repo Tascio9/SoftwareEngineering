@@ -41,11 +41,11 @@ public class PMImpl implements ProfessorManagement {
     @Override
     public String getDetails(String id) {
         for (Professor p : listOfProfessor) {
-            if (p.getId() == id) {
-                return "Professor details: -Name: " + p.getName() + "\n -Surname: " + p.getSurname() + "\n";
+            if (p.getId().equals(id)) {
+                return p.getName() + " " + p.getSurname();
             }
         }
-        return "NOT FOUND \n";
+        return "NOT FOUND";
     }
 
 }
